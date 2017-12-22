@@ -1,6 +1,7 @@
 package com.han.ethan.s17shopifymobilechallenge.helpers;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.han.ethan.s17shopifymobilechallenge.R;
+import com.han.ethan.s17shopifymobilechallenge.activities.ActivityProduct;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -88,6 +90,17 @@ public class AdapterProducts extends RecyclerView.Adapter {
                 @Override
                 public void onError() {
                     Log.e(TAG, "Picasso> onError");
+                }
+            });
+
+            // Set click listener to show product details when tapped
+            final int index = pos;
+            viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(mContext, ActivityProduct.class);
+                    in.putExtra("productJsonString", mProductList.get(index).toString());
+                    mContext.startActivity(in);
                 }
             });
         } catch (JSONException ex) {
