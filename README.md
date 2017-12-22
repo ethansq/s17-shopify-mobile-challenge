@@ -4,8 +4,11 @@ Android project for Shopify's Summer 2017 Mobile Development Intership applicati
 
 # Video
 
-Full video can be found [here](https://drive.google.com/open?id=1hALNGQiyc6Rm7Xw2jGx4R4dVgZXJqij8)
+Full video with main screen scrolling, searching, and product details can be found [here](https://drive.google.com/open?id=1hALNGQiyc6Rm7Xw2jGx4R4dVgZXJqij8)
 
+* Video for Scrolling component [here](https://drive.google.com/open?id=1huLua4EEMxnulAOdrRYvUJnNx_yDmOOV)
+* Video for Searching [here](https://drive.google.com/open?id=1lz5x2kFamqzq6k2mGw27br9o41565BxV)
+* Video for Product Details is just the full one above
 * Choppy frames due to my crusty laptop, sorry!
 
 # Functionality
