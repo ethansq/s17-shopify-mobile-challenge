@@ -102,6 +102,9 @@ public class AdapterProducts extends RecyclerView.Adapter implements Filterable 
                     product.getInt(Constants.COLOUR_FIELD)
             );
 
+            // Remove image in case we're recycling the view holder
+            viewHolder.productImage.setImageDrawable(null);
+
             // Load image with a fade-in
             final String IMAGE_URL = product.getJSONObject(Constants.IMAGE_FIELD).getString(Constants.IMAGE_SRC_FIELD);
             Picasso.with(mContext).load(IMAGE_URL).fetch(new Callback(){
