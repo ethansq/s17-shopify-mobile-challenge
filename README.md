@@ -1,4 +1,4 @@
-# s17-shopify-mobile-challenge
+# Shopify Mobile Challenge (S17)
 
 Android project for Shopify's Summer 2017 Mobile Development Intership application challenge
 
