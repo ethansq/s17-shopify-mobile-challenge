@@ -124,7 +124,7 @@ public class AdapterProducts extends RecyclerView.Adapter implements Filterable 
                 @Override
                 public void onClick(View v) {
                     Intent in = new Intent(mContext, ActivityProduct.class);
-                    in.putExtra("productJsonString", mProductList.get(index).toString());
+                    in.putExtra("productJsonString", mFilteredList.get(index).toString());
                     mContext.startActivity(in);
                 }
             });
