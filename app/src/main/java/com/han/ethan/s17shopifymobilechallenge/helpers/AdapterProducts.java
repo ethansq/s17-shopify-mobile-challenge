@@ -166,7 +166,7 @@ public class AdapterProducts extends RecyclerView.Adapter implements Filterable 
                 final String filterPattern = constraint.toString().toLowerCase().trim();
                 for (final JSONObject productJson : mProductList) {
                     try {
-                        if (productJson.getString("title").toLowerCase().startsWith(filterPattern)) {
+                        if (productJson.getString("title").toLowerCase().contains(filterPattern)) {
                             mFilteredList.add(productJson);
                         }
                     } catch (JSONException ex) {
