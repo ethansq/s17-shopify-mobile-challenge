@@ -50,8 +50,8 @@ As expected, can collapse the `Toolbar` and scroll through the `RecyclerView`. S
   
   <hr/>
   
-  ### Gradle Dependencies
-  
-  * [Volley](https://developer.android.com/training/volley/index.html)
-  * [Picasso](https://github.com/square/picasso)
-  * [CircularImageView](https://github.com/hdodenhof/CircleImageView)
+ ### Gradle Dependencies
+
+ * [Volley](https://developer.android.com/training/volley/index.html)
+ * [Picasso](https://github.com/square/picasso)
+ * [CircularImageView](https://github.com/hdodenhof/CircleImageView)
