@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class AdapterProducts extends RecyclerView.Adapter {
-    private final String TAG = "AdapterProducts";
+    private final String TAG = "AdapterDetails";
     private Context mContext;
     private ArrayList<JSONObject> mProductList;
 
