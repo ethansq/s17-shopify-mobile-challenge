@@ -2,6 +2,8 @@ package com.han.ethan.s17shopifymobilechallenge.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -11,6 +13,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.han.ethan.s17shopifymobilechallenge.R;
+import com.han.ethan.s17shopifymobilechallenge.helpers.AdapterProducts;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,6 +26,7 @@ public class ActivityMain extends AppCompatActivity {
 
     private RequestQueue mRequestQueue;
     private ArrayList<JSONObject> mProductList;
+    private RecyclerView mProductRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,12 @@ public class ActivityMain extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mProductList = new ArrayList<>();
+
+        mProductRecyclerView = findViewById(R.id.productRecyclerView);
+        // Set its layout manager
+        mProductRecyclerView.setLayoutManager(
+                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        );
 
         /**
          * On create, fetch product data using the given URL
@@ -50,7 +60,12 @@ public class ActivityMain extends AppCompatActivity {
                                 mProductList.add((JSONObject) productsArray.get(i));
                             }
 
-                            Log.e(TAG, mProductList.size()+"abc");
+//                            Log.e(TAG, mProductList.size()+"abc");
+
+                            mProductRecyclerView.setAdapter(
+                                    new AdapterProducts(mProductList, ActivityMain.this)
+                            );
+
                         } catch (JSONException ex) {
                             ex.printStackTrace();
                         }
