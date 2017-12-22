@@ -18,11 +18,15 @@ Android project for Shopify's Summer 2017 Mobile Development Intership applicati
   * For each product, get its image src, and download and apply the image to the item `ImageView` using `Picasso`
   * When an item is clicked, open `ActivityDetails` that shows more details for that item
 
+<hr/>
+
 <img src="https://github.com/ethansq/s17-shopify-mobile-challenge/blob/master/screens/2_scroll.png?raw=true" width="300">
 
 ### Scrolling
 
 As expected, can collapse the Toolbar and scroll through the RecyclerView. Search bar at the top for filter functionality.
+
+<hr/>
 
 <img src="https://github.com/ethansq/s17-shopify-mobile-challenge/blob/master/screens/3_search.png?raw=true" width="300">
 
@@ -31,6 +35,8 @@ As expected, can collapse the Toolbar and scroll through the RecyclerView. Searc
 * Our `AdapterProducts` implements `Filterable`, which updates our filtered product list when the user types input to the search box EditText.
 * `onTextChange`, iterate through product list for product titles that match the specified text
 * call `notifyDataSetChanged` to update the Adapter & RecyclerView
+
+<hr/>
 
 <img src="https://github.com/ethansq/s17-shopify-mobile-challenge/blob/master/screens/4_details.png?raw=true" width="300">
 
