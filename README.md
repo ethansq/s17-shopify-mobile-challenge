@@ -2,6 +2,12 @@
 
 Android project for Shopify's Summer 2017 Mobile Development Intership application challenge
 
+# Video
+
+Full video can be found [here](https://drive.google.com/open?id=1hALNGQiyc6Rm7Xw2jGx4R4dVgZXJqij8)
+
+* Choppy frames due to my crusty laptop, sorry!
+
 # Functionality
 
 <img src="https://github.com/ethansq/s17-shopify-mobile-challenge/blob/master/screens/1_main.png?raw=true" width="300">
@@ -17,6 +23,7 @@ Android project for Shopify's Summer 2017 Mobile Development Intership applicati
   * Set adapter using the productJsonList
   * For each product, get its image src, and download and apply the image to the item `ImageView` using `Picasso`, with a quick fade-in on download completion
   * When an item is clicked, open `ActivityDetails` that shows more details for that item
+  * For each item, randomly chooses a colour for the left-border
 
 <hr/>
 
@@ -48,7 +55,7 @@ As expected, can collapse the `Toolbar` and scroll through the `RecyclerView`. S
   * eg. "variants" refers to a JSONObject, so we don't display it
   * eg. "product_type" refers to a String representing the item's type, so we display it
   
-  <hr/>
+ <hr/>
   
  ### Gradle Dependencies
 
