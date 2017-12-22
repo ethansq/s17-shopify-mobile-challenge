@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -67,7 +68,7 @@ public class ActivityMain extends AppCompatActivity {
                             }
 
                             mProductRecyclerView.setAdapter(
-                                    new AdapterProducts(mProductList, ActivityMain.this)
+                                    new AdapterProducts(mProductList, (EditText) findViewById(R.id.searchBox), ActivityMain.this)
                             );
 
                         } catch (JSONException ex) {
