@@ -47,3 +47,11 @@ As expected, can collapse the `Toolbar` and scroll through the `RecyclerView`. S
 * Simple `RecyclerView` for scrolling through each of the productJson's String-String key-value pairs. Ignores non-String values like JSONObjects and JSONArrays
   * eg. "variants" refers to a JSONObject, so we don't display it
   * eg. "product_type" refers to a String representing the item's type, so we display it
+  
+  <hr/>
+  
+  ### Gradle Dependencies
+  
+  * [Volley](https://developer.android.com/training/volley/index.html)
+  * [Picasso](https://github.com/square/picasso)
+  * [CircularImageView](https://github.com/hdodenhof/CircleImageView)
