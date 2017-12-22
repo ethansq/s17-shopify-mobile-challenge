@@ -33,8 +33,9 @@ As expected, can collapse the `Toolbar` and scroll through the `RecyclerView`. S
 ### Searching
 
 * Our `AdapterProducts` implements `Filterable`, which updates our filtered product list when the user types input to the search box EditText.
-* `onTextChange`, iterate through product list for product titles that match the specified text
-* call `notifyDataSetChanged` to update the Adapter & RecyclerView
+* Attaching `addTextChangedListener` to the EditText
+  * `onTextChange`, iterate through product list for product titles that match the specified text
+* Call `notifyDataSetChanged` to update the Adapter & RecyclerView
 
 <hr/>
 
