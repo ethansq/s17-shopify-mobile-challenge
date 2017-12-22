@@ -15,7 +15,7 @@ Android project for Shopify's Summer 2017 Mobile Development Intership applicati
 * `EditText` for search box
 * `RecyclerView` with customer `Adapter` for list of products
   * Set adapter using the productJsonList
-  * For each product, get its image src, and download and apply the image to the item `ImageView` using `Picasso`
+  * For each product, get its image src, and download and apply the image to the item `ImageView` using `Picasso`, with a quick fade-in on download completion
   * When an item is clicked, open `ActivityDetails` that shows more details for that item
 
 <hr/>
@@ -24,7 +24,7 @@ Android project for Shopify's Summer 2017 Mobile Development Intership applicati
 
 ### Scrolling
 
-As expected, can collapse the Toolbar and scroll through the RecyclerView. Search bar at the top for filter functionality.
+As expected, can collapse the `Toolbar` and scroll through the `RecyclerView`. Search bar at the top for filter functionality.
 
 <hr/>
 
@@ -43,6 +43,6 @@ As expected, can collapse the Toolbar and scroll through the RecyclerView. Searc
 ### ActivityDetails
 
 * Simple screen that shows the product item's image and title
-* Simple RecyclerView for scrolling through each of the productJson's String-String key-value pairs. Ignores non-String values like JSONObjects and JSONArrays
+* Simple `RecyclerView` for scrolling through each of the productJson's String-String key-value pairs. Ignores non-String values like JSONObjects and JSONArrays
   * eg. "variants" refers to a JSONObject, so we don't display it
   * eg. "product_type" refers to a String representing the item's type, so we display it
