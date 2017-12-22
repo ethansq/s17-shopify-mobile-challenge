@@ -14,12 +14,14 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.han.ethan.s17shopifymobilechallenge.R;
 import com.han.ethan.s17shopifymobilechallenge.helpers.AdapterProducts;
+import com.han.ethan.s17shopifymobilechallenge.helpers.Constants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ActivityMain extends AppCompatActivity {
     private final String TAG = "ActivityMain";
@@ -46,9 +48,7 @@ public class ActivityMain extends AppCompatActivity {
          */
         mRequestQueue = Volley.newRequestQueue(this);
 
-        final String URL = "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6";
-
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, URL, null,
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, Constants.PRODUCT_URL, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -58,9 +58,11 @@ public class ActivityMain extends AppCompatActivity {
                             int n = productsArray.length();
                             for (int i=0; i<n; i++) {
                                 mProductList.add((JSONObject) productsArray.get(i));
+                                // Add a random colour for decoration
+                                mProductList.get(i).put(
+                                        Constants.COLOUR_FIELD, Constants.COLOURS[new Random().nextInt(Constants.NUM_COLOURS)]
+                                );
                             }
-
-//                            Log.e(TAG, mProductList.size()+"abc");
 
                             mProductRecyclerView.setAdapter(
                                     new AdapterProducts(mProductList, ActivityMain.this)

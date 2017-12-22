@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/contentView"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <View
+        android:id="@+id/borderView"
         android:background="#000"
-        android:layout_width="3dp"
+        android:layout_width="6dp"
         android:layout_height="match_parent" />
 
     <LinearLayout
@@ -16,34 +18,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_marginRight="16dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
             android:id="@+id/productImage"
             android:layout_width="64dp"
-            android:layout_height="64dp" />
+            android:layout_height="64dp"
+            android:layout_marginRight="16dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#EBEBEB"/>
 
         <LinearLayout
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/productImage"
+            android:layout_gravity="center"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:textSize="16sp"
-                android:text="Apple Blossom"
                 android:id="@+id/productTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_marginTop="8dp"
-                android:text="This item is luxurious, pairable with any dining table set available."
                 android:id="@+id/productDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>
